@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3ccbf6a6-2bd4-4227-9f1b-ccc00d7e1d73" name="Changes" comment="fourth exercise corrected.">
-      <change beforePath="$PROJECT_DIR$/src/Solutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solutions.java" afterDir="false" />
-    </list>
+    <list default="true" id="3ccbf6a6-2bd4-4227-9f1b-ccc00d7e1d73" name="Changes" comment="fifth and sixth exercises implemented." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -64,7 +69,7 @@
       <workItem from="1695304269557" duration="3193000" />
       <workItem from="1695307688769" duration="382000" />
       <workItem from="1695383729527" duration="953000" />
-      <workItem from="1695386528506" duration="9665000" />
+      <workItem from="1695386528506" duration="10147000" />
     </task>
     <task id="LOCAL-00001" summary="first exercise corrected.">
       <option name="closed" value="true" />
@@ -82,7 +87,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695396167089</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="fifth and sixth exercises implemented.">
+      <option name="closed" value="true" />
+      <created>1695396732182</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1695396732182</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fifth and sixth exercises implemented.">
+      <option name="closed" value="true" />
+      <created>1695396776215</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1695396776215</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,6 +112,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first exercise corrected." />
     <MESSAGE value="fourth exercise corrected." />
-    <option name="LAST_COMMIT_MESSAGE" value="fourth exercise corrected." />
+    <MESSAGE value="fifth and sixth exercises implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="fifth and sixth exercises implemented." />
   </component>
 </project>
