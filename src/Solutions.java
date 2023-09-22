@@ -57,8 +57,7 @@ public class Solutions {
         int rightMostA = a.length() - 1, rightMostB = b.length() - 1;
 
         while (rightMostA >= 0 || rightMostB >= 0) {
-            int bitA = a.charAt(rightMostA--) - 48;
-            int bitB = b.charAt(rightMostB--) - 48;
+            int bitA = a.charAt(rightMostA--) - 48, bitB = b.charAt(rightMostB--) - 48;
 
             int sum = bitA + bitB + carry;
             carry = sum / 2;
@@ -72,7 +71,26 @@ public class Solutions {
     }
 
     int countVariants(int stearsCount) {
-        return 0;
+        int variants = 0;
+        int maxTwoStep = stearsCount / 2;
+
+        for (int i = 0; i <= maxTwoStep; i++) {
+            variants += C(stearsCount - i, i);
+        }
+
+        return variants;
+    }
+
+    private int C(int m, int n) {
+        int num = 1;
+        int den = 1;
+
+        for (int i = 0; i < m - n; i++) {
+            num *= (m - i);
+            den *= (i + 1);
+        }
+
+        return num / den;
     }
 
     private void quickSort(int[] arr) {
@@ -106,5 +124,86 @@ public class Solutions {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+}
+
+class O1DeletionDataStructure<K, V> {
+    private final Map<K, Node<V>> keyToNodeMap;
+    private final DoublyLinkedList<V> list;
+
+    public O1DeletionDataStructure() {
+        keyToNodeMap = new HashMap<>();
+        list = new DoublyLinkedList<>();
+    }
+
+    public void insert(K key, V value) {
+        if (!keyToNodeMap.containsKey(key)) {
+            Node<V> newNode = list.add(value);
+            keyToNodeMap.put(key, newNode);
+        }
+    }
+
+    public void delete(K key) {
+        if (keyToNodeMap.containsKey(key)) {
+            Node<V> nodeToDelete = keyToNodeMap.get(key);
+            list.remove(nodeToDelete);
+            keyToNodeMap.remove(key);
+        }
+    }
+
+    public V getRandom() {
+        return list.getRandom();
+    }
+
+    private static class Node<V> {
+        V value;
+        Node<V> prev;
+        Node<V> next;
+
+        public Node(V value) {
+            this.value = value;
+        }
+    }
+
+    private static class DoublyLinkedList<V> {
+        Node<V> head;
+        Node<V> tail;
+
+        public Node<V> add(V value) {
+            Node<V> newNode = new Node<>(value);
+            if (head == null) {
+                head = tail = newNode;
+            } else {
+                newNode.next = head;
+                head.prev = newNode;
+                head = newNode;
+            }
+            return newNode;
+        }
+
+        public void remove(Node<V> node) {
+            if (node == null) {
+                return;
+            }
+            if (node == head) {
+                head = head.next;
+            }
+            if (node == tail) {
+                tail = tail.prev;
+            }
+            if (node.prev != null) {
+                node.prev.next = node.next;
+            }
+            if (node.next != null) {
+                node.next.prev = node.prev;
+            }
+        }
+
+        public V getRandom() {
+            if (head == null) {
+                return null;
+            }
+            return head.value;
+        }
     }
 }
