@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Solutions {
+public class Main {
     int singleNumber(int[] nums) {
         HashMap<Integer, Integer> frequencyMap = new HashMap<>();
 
